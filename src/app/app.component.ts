@@ -12,4 +12,10 @@ export class AppComponent {
 	PI: number = Math.PI;
 	percentage: number = 0.234;
 	salary: number = 65500.5;
+	hero = {
+		name: "Logan",
+		nick: "Wolverine",
+		age: 500,
+		address: "USA"
+	};
 }

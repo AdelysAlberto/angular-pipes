@@ -67,18 +67,28 @@
 				</tr>
 				<tr>
 					<td>{{ salary }}</td>
-					<td>cuerrency</td>
-					<td>{{ percentage | currency }}</td>
+					<td>cuerrency:'ARS'</td>
+					<td>{{ salary | currency: "ARS" }}</td>
+				</tr>
+				<tr>
+					<td>{{ salary }}</td>
+					<td>cuerrency:'USD':'symbol-narrow'</td>
+					<td>
+						{{ salary | currency: "USD":"symbol-narrow":".0-0" }}
+					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </div>
+
+<h3 class="mt-2">JSON</h3>
+<hr />
 <div class="row">
 	<div class="col">
-		<h3>Slice</h3>
-		<ul>
-			<li *ngFor="let item of arreglo">{{ item }}</li>
-		</ul>
+		<pre>
+    {{ hero | json }}
+    </pre
+		>
 	</div>
 </div>
