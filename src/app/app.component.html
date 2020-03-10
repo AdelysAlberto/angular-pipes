@@ -77,6 +77,73 @@
 						{{ salary | currency: "USD":"symbol-narrow":".0-0" }}
 					</td>
 				</tr>
+				<tr>
+					<td>{{ isPromise }}</td>
+					<td>async</td>
+					<td>
+						{{ isPromise | async }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ isDate }}</td>
+					<td>date</td>
+					<td>
+						{{ isDate | date }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ isDate }}</td>
+					<td>date: 'medium'</td>
+					<td>
+						{{ isDate | date: "medium" }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ isDate }}</td>
+					<td>date: 'short'</td>
+					<td>
+						{{ isDate | date: "short" }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ isDate }}</td>
+					<td>date: 'MMMM, d'</td>
+					<td>
+						{{ isDate | date: "MMMM, d" }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ isDate }}</td>
+					<td>date: "MMMM, d":'':'en'</td>
+					<td>
+						{{ isDate | date: "MMMM, d":"":"en" }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ textHello }}</td>
+					<td>personalized pipe = capitalize</td>
+					<td>
+						{{ textHello | capitalize: false }}
+					</td>
+				</tr>
+				<tr>
+					<td>{{ textHello }}</td>
+					<td>
+						<div>
+							personalized pipe = password | show {{ show }}
+							<br />
+							<button
+								(click)="show = !show"
+								class="btn btn-outline-primary"
+							>
+								{{ show ? "Hidden" : "Show " }}
+							</button>
+						</div>
+					</td>
+					<td>
+						{{ textHello | password: show }}
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
